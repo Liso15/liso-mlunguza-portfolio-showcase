@@ -1,6 +1,7 @@
 
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,6 +17,7 @@ const Navbar = () => {
     { name: 'Experience', href: '#experience' },
     { name: 'Projects', href: '#projects' },
     { name: 'Contact', href: '#contact' },
+    { name: 'Elevator Pitch', href: '/elevator-pitch', isPage: true },
   ];
 
   return (
@@ -27,13 +29,23 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
             {navItems.map((item) => (
-              <a 
-                key={item.name} 
-                href={item.href}
-                className="text-gray-600 hover:text-blue-800 transition-colors"
-              >
-                {item.name}
-              </a>
+              item.isPage ? (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  className="text-gray-600 hover:text-blue-800 transition-colors"
+                >
+                  {item.name}
+                </Link>
+              ) : (
+                <a 
+                  key={item.name} 
+                  href={item.href}
+                  className="text-gray-600 hover:text-blue-800 transition-colors"
+                >
+                  {item.name}
+                </a>
+              )
             ))}
           </div>
           
@@ -51,14 +63,25 @@ const Navbar = () => {
           <div className="md:hidden py-4 animate-in fade-in slide-in-from-top duration-300">
             <div className="flex flex-col space-y-4">
               {navItems.map((item) => (
-                <a 
-                  key={item.name} 
-                  href={item.href}
-                  className="text-gray-600 hover:text-blue-800 transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {item.name}
-                </a>
+                item.isPage ? (
+                  <Link
+                    key={item.name}
+                    to={item.href}
+                    className="text-gray-600 hover:text-blue-800 transition-colors"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                ) : (
+                  <a 
+                    key={item.name} 
+                    href={item.href}
+                    className="text-gray-600 hover:text-blue-800 transition-colors"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item.name}
+                  </a>
+                )
               ))}
             </div>
           </div>
