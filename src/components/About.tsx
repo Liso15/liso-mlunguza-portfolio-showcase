@@ -29,9 +29,29 @@ const About = () => {
               I'm seeking a challenging role where I can apply my skills to contribute to organizational success, 
               particularly in data science and software engineering fields.
             </p>
-            <p className="text-gray-700">
+            <p className="text-gray-700 mb-6">
               My aspiration is to found a tech startup that leverages data science and AI to solve real-world problems.
             </p>
+            
+            <div className="bg-blue-50 p-6 rounded-lg border border-blue-100 mb-6">
+              <p className="text-gray-700 mb-4">
+                As a dedicated and ambitious Data Scientist, I'm passionate about transforming complex data into actionable insights. 
+                I specialize in leveraging machine learning and statistical analysis to drive business growth and innovation. 
+              </p>
+              <p className="text-gray-700 mb-4">
+                With a strong educational background in B.Com general (Business Management and Economics) and specialized courses 
+                in Software Development, Data Science, Python, and Machine Learning, I've developed expertise through internships and personal projects.
+              </p>
+              <p className="text-gray-700 mb-4">
+                Among my achievements are developing a predictive model that reduced inventory costs for a local business by 15% 
+                and optimizing operational efficiency by 20% during an internship through data analysis.
+              </p>
+              <p className="text-gray-700">
+                My journey hasn't been without challenges. I've experienced Imposter Syndrome, which I've learned to navigate through 
+                self-affirmation, seeking constructive feedback, and mentorship. This experience has strengthened my resilience and 
+                dedication to personal growth alongside professional development.
+              </p>
+            </div>
           </div>
           
           <div>
