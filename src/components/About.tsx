@@ -1,6 +1,7 @@
 
-import { Code, Database, BarChart } from 'lucide-react';
+import { Code, Database, BarChart, ExternalLink } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
 
 const About = () => {
   const skills = [
@@ -51,6 +52,15 @@ const About = () => {
                 self-affirmation, seeking constructive feedback, and mentorship. This experience has strengthened my resilience and 
                 dedication to personal growth alongside professional development.
               </p>
+            </div>
+            
+            <div className="mt-8 text-center">
+              <Button className="bg-blue-700 hover:bg-blue-800" asChild>
+                <a href="https://datascienceportfol.io/lisomlunguza8" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                  <span>View My Data Science Portfolio</span>
+                  <ExternalLink size={16} />
+                </a>
+              </Button>
             </div>
           </div>
           
