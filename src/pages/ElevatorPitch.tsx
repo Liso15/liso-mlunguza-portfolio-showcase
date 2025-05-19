@@ -14,13 +14,14 @@ const ElevatorPitch = () => {
         <h1 className="text-3xl md:text-4xl font-bold text-center mb-8">Elevator Pitch Video</h1>
         
         <div className="w-full max-w-3xl mx-auto bg-gray-100 rounded-lg shadow-md overflow-hidden">
-          <div className="relative aspect-video bg-blue-800/10">
+          <div className="relative aspect-video">
             <iframe 
               src={embedUrl}
               className="absolute inset-0 w-full h-full"
               title="Elevator Pitch Video"
               frameBorder="0"
               allowFullScreen
+              allow="autoplay; encrypted-media"
             ></iframe>
           </div>
           
